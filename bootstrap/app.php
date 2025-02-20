@@ -14,6 +14,9 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->alias([
             'user-access' => \App\Http\Middleware\UserAccess::class,
         ]);
+        $middleware->validateCsrfTokens(except: [
+            'login' // <-- exclude this route
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //
