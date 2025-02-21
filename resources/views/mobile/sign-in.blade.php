@@ -26,7 +26,7 @@
     <section class="bg-white body_rounded mt-n5 position-relative p-4">
        <h1>Welcome!</h1>
        <p class="text-muted">Sign in continue</p>
-       <form class="" action="{{route('login')}}" id="submitLogins">
+       <form class="" method="post" action="{{route('login')}}" id="submitLogins">
           @csrf
           <div class="d-flex align-items-center mb-3">
              <span class="mdi mdi-email-outline box_rounded p-2 btn btn-light mr-3 text-primary"></span>
